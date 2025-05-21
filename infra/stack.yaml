@@ -1,0 +1,819 @@
+---
+Metadata:
+  AWSToolsMetrics:
+    IaC_Generator: "arn:aws:cloudformation:eu-west-1:788174142154:generatedTemplate/099990c7-ea58-4d9c-8d86-9e06d348116f"
+Parameters:
+  LambdaFunctionProjPauComprehendCodeS3KeyHIazx:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionProjPauComprehendCodeS3ObjectVersionnjUks:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionProjPaulLambdaCodeS3BucketewKqD:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionProjPaulLambdaCodeS3KeyjoMjA:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionProjPauTranslateCodeZipFilefgh1T:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionProjPauComprehendCodeImageUriXuTO6:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionProjPauComprehendCodeS3Bucketa5RZD:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionProjPauLambdaSESCodeS3KeyE3fEY:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionProjPaulLambdaCodeImageUri8xHEz:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionProjPauTranslateCodeImageUrijeFSl:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionProjPauComprehendCodeZipFileMfZPQ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionProjPauLambdaSESCodeS3ObjectVersionVGIFx:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionProjPauTranslateCodeS3BucketZ086k:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionProjPaulLambdaCodeZipFilebLlMc:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionProjPauLambdaSESCodeImageUrin7pYy:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionProjPauTranslateCodeS3ObjectVersion2WA6C:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionProjPauTranslateCodeS3KeyKa3dq:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionProjPauLambdaSESCodeS3Bucketk4y34:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionProjPaulLambdaCodeS3ObjectVersionImvmm:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionProjPauLambdaSESCodeZipFile0JA62:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+Resources:
+  ApiGatewayV2DeploymentOb:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Delete"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  SQSQueueProjPauSESSQSDLQ:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::SQS::Queue"
+    DeletionPolicy: "Delete"
+    Properties:
+      SqsManagedSseEnabled: true
+      ReceiveMessageWaitTimeSeconds: 0
+      DelaySeconds: 0
+      MessageRetentionPeriod: 345600
+      MaximumMessageSize: 262144
+      VisibilityTimeout: 30
+      QueueName: "ProjPauSES_SQS_DLQ"
+  LambdaFunctionProjPaulLambda:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Delete"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 10
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionProjPaulLambdaCodeS3ObjectVersionImvmm"
+        S3Bucket:
+          Ref: "LambdaFunctionProjPaulLambdaCodeS3BucketewKqD"
+        ZipFile:
+          Ref: "LambdaFunctionProjPaulLambdaCodeZipFilebLlMc"
+        ImageUri:
+          Ref: "LambdaFunctionProjPaulLambdaCodeImageUri8xHEz"
+        S3Key:
+          Ref: "LambdaFunctionProjPaulLambdaCodeS3KeyjoMjA"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleProjPaulLambdarolehx3598sd"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "ProjPaulLambda"
+      Runtime: "python3.13"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/ProjPaulLambda"
+      RecursiveLoop: "Terminate"
+      Environment:
+        Variables:
+          SNS_TOPIC_ARN: "arn:aws:sns:eu-west-1:788174142154:ProjPauSNS"
+      EphemeralStorage:
+        Size: 512
+      Layers:
+      - "arn:aws:lambda:eu-west-1:788174142154:layer:jinja2_layer:2"
+      Architectures:
+      - "x86_64"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaLambdaFunctionDestinationExecutionRolec47bb3ab62f344faa0b789a37521da5e:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Delete"
+    Properties:
+      ManagedPolicyName: "AWSLambdaLambdaFunctionDestinationExecutionRole-c47bb3ab-62f3-44fa-a0b7-89a37521da5e"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:lambda:eu-west-1:788174142154:function:ProjPauComprehend*"
+          Action: "lambda:InvokeFunction"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleProjPauTranslateIAM"
+      Users: []
+  SQSQueueProjPauSQSDLQ:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::SQS::Queue"
+    DeletionPolicy: "Delete"
+    Properties:
+      SqsManagedSseEnabled: true
+      ReceiveMessageWaitTimeSeconds: 0
+      DelaySeconds: 30
+      MessageRetentionPeriod: 345600
+      MaximumMessageSize: 262144
+      VisibilityTimeout: 30
+      QueueName: "ProjPauSQSDLQ"
+  IAMRoleProjPaulLambdarolehx3598sd:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Delete"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+      - "arn:aws:iam::788174142154:policy/service-role/AWSLambdaBasicExecutionRole-26c41c79-a72a-413c-98cf-bf3425c19b2f"
+      - "arn:aws:iam::aws:policy/AmazonSNSFullAccess"
+      - "arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess"
+      - "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "ProjPaulLambda-role-hx3598sd"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole7ce5c96359774ebc8472129882242af4:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Delete"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-7ce5c963-5977-4ebc-8472-129882242af4"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:eu-west-1:788174142154:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:eu-west-1:788174142154:log-group:/aws/lambda/ProjPauComprehend:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleProjPauComprehendroled4yimzfh"
+      Users: []
+  ApiGatewayV2DeploymentN4:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Delete"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  ApiGatewayV2Api:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::ApiGatewayV2::Api"
+    DeletionPolicy: "Delete"
+    Properties:
+      IpAddressType: "ipv4"
+      RouteSelectionExpression: "$request.method $request.path"
+      DisableExecuteApiEndpoint: false
+      ProtocolType: "HTTP"
+      Tags: {}
+      Name: "ProjPauGateWay"
+  LambdaPermissionFunctionProjPaulLambda:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Delete"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionProjPaulLambda"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:execute-api:eu-west-1:788174142154:tvfewqyeq2/*/*/your-translation-api"
+      Principal: "apigateway.amazonaws.com"
+  LambdaPermissionFunctionProjPaulLambdaWM:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Delete"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionProjPaulLambda"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn:
+        Ref: "SNSTopicProjPauSNS"
+      Principal: "sns.amazonaws.com"
+  SQSQueueProjPauSESSQS:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::SQS::Queue"
+    DeletionPolicy: "Delete"
+    Properties:
+      SqsManagedSseEnabled: true
+      ReceiveMessageWaitTimeSeconds: 0
+      DelaySeconds: 0
+      RedrivePolicy:
+        deadLetterTargetArn: "arn:aws:sqs:eu-west-1:788174142154:ProjPauSES_SQS_DLQ"
+        maxReceiveCount: 10
+      MessageRetentionPeriod: 345600
+      MaximumMessageSize: 262144
+      VisibilityTimeout: 30
+      QueueName: "ProjPauSES_SQS"
+  LambdaFunctionProjPauTranslate:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Delete"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 60
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionProjPauTranslateCodeS3ObjectVersion2WA6C"
+        S3Bucket:
+          Ref: "LambdaFunctionProjPauTranslateCodeS3BucketZ086k"
+        ZipFile:
+          Ref: "LambdaFunctionProjPauTranslateCodeZipFilefgh1T"
+        ImageUri:
+          Ref: "LambdaFunctionProjPauTranslateCodeImageUrijeFSl"
+        S3Key:
+          Ref: "LambdaFunctionProjPauTranslateCodeS3KeyKa3dq"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleProjPauTranslateIAM"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "ProjPauTranslate"
+      Runtime: "python3.13"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/ProjPauTranslate"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole26c41c79a72a413c98cfbf3425c19b2f:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Delete"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-26c41c79-a72a-413c-98cf-bf3425c19b2f"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:eu-west-1:788174142154:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:eu-west-1:788174142154:log-group:/aws/lambda/ProjPaulLambda:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleProjPaulLambdarolehx3598sd"
+      Users: []
+  LambdaPermissionFunctionProjPaulLambdaOK:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Delete"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionProjPaulLambda"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:execute-api:eu-west-1:788174142154:tvfewqyeq2/*/*/ProjPaulLambda"
+      Principal: "apigateway.amazonaws.com"
+  S3BucketPolicyProjpaus3:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::S3::BucketPolicy"
+    DeletionPolicy: "Delete"
+    Properties:
+      Bucket:
+        Ref: "S3BucketProjpaus3"
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:s3:::proj-pau-s3/*"
+          Action: "s3:GetObject"
+          Effect: "Allow"
+          Principal: "*"
+  SNSTopicProjPauSNS:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::SNS::Topic"
+    DeletionPolicy: "Delete"
+    Properties:
+      FifoTopic: false
+      Subscription:
+      - Endpoint:
+          Fn::GetAtt:
+          - "SQSQueueProjPauSQS"
+          - "Arn"
+        Protocol: "sqs"
+      - Endpoint:
+          Fn::GetAtt:
+          - "SQSQueueProjPauSESSQS"
+          - "Arn"
+        Protocol: "sqs"
+      - Endpoint:
+          Fn::GetAtt:
+          - "LambdaFunctionProjPaulLambda"
+          - "Arn"
+        Protocol: "lambda"
+      TracingConfig: "PassThrough"
+      ArchivePolicy: {}
+      TopicName: "ProjPauSNS"
+  LambdaFunctionProjPauLambdaSES:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Delete"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionProjPauLambdaSESCodeS3ObjectVersionVGIFx"
+        S3Bucket:
+          Ref: "LambdaFunctionProjPauLambdaSESCodeS3Bucketk4y34"
+        ZipFile:
+          Ref: "LambdaFunctionProjPauLambdaSESCodeZipFile0JA62"
+        ImageUri:
+          Ref: "LambdaFunctionProjPauLambdaSESCodeImageUrin7pYy"
+        S3Key:
+          Ref: "LambdaFunctionProjPauLambdaSESCodeS3KeyE3fEY"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleProjPauLambdaSESrolef40be1w9"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "ProjPauLambdaSES"
+      Runtime: "python3.13"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/ProjPauLambdaSES"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  ApiGatewayV2Deployment:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Delete"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Created by AWS Lambda"
+  LambdaFunctionProjPauComprehend:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Delete"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionProjPauComprehendCodeS3ObjectVersionnjUks"
+        S3Bucket:
+          Ref: "LambdaFunctionProjPauComprehendCodeS3Bucketa5RZD"
+        ZipFile:
+          Ref: "LambdaFunctionProjPauComprehendCodeZipFileMfZPQ"
+        ImageUri:
+          Ref: "LambdaFunctionProjPauComprehendCodeImageUriXuTO6"
+        S3Key:
+          Ref: "LambdaFunctionProjPauComprehendCodeS3KeyHIazx"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleProjPauComprehendroled4yimzfh"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "ProjPauComprehend"
+      Runtime: "python3.13"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/ProjPauComprehend"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  LambdaEventSourceMapping:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::EventSourceMapping"
+    DeletionPolicy: "Delete"
+    Properties:
+      BatchSize: 10
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionProjPauLambdaSES"
+        - "Arn"
+      Enabled: true
+      EventSourceArn:
+        Fn::GetAtt:
+        - "SQSQueueProjPauSESSQS"
+        - "Arn"
+      Tags: []
+      MetricsConfig:
+        Metrics: []
+      MaximumBatchingWindowInSeconds: 0
+  DynamoDBTableProjPauDDB:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::DynamoDB::Table"
+    DeletionPolicy: "Delete"
+    Properties:
+      SSESpecification:
+        SSEEnabled: false
+      TableName: "ProjPauDDB"
+      AttributeDefinitions:
+      - AttributeType: "S"
+        AttributeName: "MessageID"
+      ContributorInsightsSpecification:
+        Enabled: false
+      BillingMode: "PAY_PER_REQUEST"
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      WarmThroughput:
+        ReadUnitsPerSecond: 12000
+        WriteUnitsPerSecond: 4000
+      KeySchema:
+      - KeyType: "HASH"
+        AttributeName: "MessageID"
+      DeletionProtectionEnabled: false
+      TableClass: "STANDARD"
+      Tags: []
+      TimeToLiveSpecification:
+        Enabled: false
+  IAMRoleProjPauComprehendroled4yimzfh:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Delete"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+      - "arn:aws:iam::788174142154:policy/service-role/AWSLambdaBasicExecutionRole-7ce5c963-5977-4ebc-8472-129882242af4"
+      - "arn:aws:iam::aws:policy/ComprehendFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "ProjPauComprehend-role-d4yimzfh"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  ApiGatewayV2DeploymentNZ:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Delete"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  S3BucketProjpaus3:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Delete"
+    Properties:
+      WebsiteConfiguration:
+        IndexDocument: "translation_tool.html"
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: false
+        IgnorePublicAcls: false
+        BlockPublicPolicy: false
+        BlockPublicAcls: false
+      BucketName: "proj-pau-s3"
+      CorsConfiguration:
+        CorsRules:
+        - AllowedHeaders:
+          - "*"
+          AllowedMethods:
+          - "POST"
+          AllowedOrigins:
+          - "*"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+  LambdaEventSourceMappingDQ:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::Lambda::EventSourceMapping"
+    DeletionPolicy: "Delete"
+    Properties:
+      BatchSize: 10
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionProjPauTranslate"
+        - "Arn"
+      Enabled: true
+      EventSourceArn:
+        Fn::GetAtt:
+        - "SQSQueueProjPauSQS"
+        - "Arn"
+      Tags: []
+      MetricsConfig:
+        Metrics: []
+      MaximumBatchingWindowInSeconds: 5
+  IAMRoleProjPauLambdaSESrolef40be1w9:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Delete"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonSESFullAccess"
+      - "arn:aws:iam::aws:policy/AmazonSQSFullAccess"
+      - "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+      - "arn:aws:iam::788174142154:policy/service-role/AWSLambdaBasicExecutionRole-41c8a658-d84a-4d6a-85f2-18090d82008e"
+      MaxSessionDuration: 3600
+      RoleName: "ProjPauLambdaSES-role-f40be1w9"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  ApiGatewayV2DeploymentJO:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Delete"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  ApiGatewayV2DeploymentEg:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Delete"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  IAMRoleProjPauTranslateIAM:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Delete"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::788174142154:policy/service-role/AWSLambdaLambdaFunctionDestinationExecutionRole-c47bb3ab-62f3-44fa-a0b7-89a37521da5e"
+      - "arn:aws:iam::aws:policy/TranslateFullAccess"
+      - "arn:aws:iam::788174142154:policy/service-role/AWSLambdaLambdaFunctionDestinationExecutionRole-0ee4057f-9a1c-4aa2-bd8a-549d2cd22cb5"
+      - "arn:aws:iam::aws:policy/AmazonSNSFullAccess"
+      - "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+      - "arn:aws:iam::aws:policy/service-role/AWSLambdaSQSQueueExecutionRole"
+      MaxSessionDuration: 3600
+      RoleName: "ProjPauTranslateIAM"
+      Description: "Allows Lambda functions to call AWS services on your behalf."
+      Policies:
+      - PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+          - Resource: "arn:aws:lambda:eu-west-1:788174142154:function:ProjPauComprehend"
+            Action: "lambda:InvokeFunction"
+            Effect: "Allow"
+        PolicyName: "lambdaInvokeFunction"
+      - PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+          - Resource: "*"
+            Action:
+            - "logs:CreateLogGroup"
+            - "logs:CreateLogStream"
+            - "logs:PutLogEvents"
+            Effect: "Allow"
+        PolicyName: "Logs"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaLambdaFunctionDestinationExecutionRole0ee4057f9a1c4aa2bd8a549d2cd22cb5:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Delete"
+    Properties:
+      ManagedPolicyName: "AWSLambdaLambdaFunctionDestinationExecutionRole-0ee4057f-9a1c-4aa2-bd8a-549d2cd22cb5"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:lambda:eu-west-1:788174142154:function:ProjPauComprehend*"
+          Action: "lambda:InvokeFunction"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleProjPauTranslateIAM"
+      Users: []
+  ApiGatewayV2DeploymentIb:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Delete"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  SQSQueueProjPauSQS:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::SQS::Queue"
+    DeletionPolicy: "Delete"
+    Properties:
+      SqsManagedSseEnabled: true
+      ReceiveMessageWaitTimeSeconds: 0
+      DelaySeconds: 0
+      RedrivePolicy:
+        deadLetterTargetArn: "arn:aws:sqs:eu-west-1:788174142154:ProjPauSQSDLQ"
+        maxReceiveCount: 3
+      MessageRetentionPeriod: 345600
+      MaximumMessageSize: 262144
+      VisibilityTimeout: 120
+      QueueName: "ProjPauSQS"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole41c8a658d84a4d6a85f218090d82008e:
+    UpdateReplacePolicy: "Delete"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Delete"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-41c8a658-d84a-4d6a-85f2-18090d82008e"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:eu-west-1:788174142154:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:eu-west-1:788174142154:log-group:/aws/lambda/ProjPauLambdaSES:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleProjPauLambdaSESrolef40be1w9"
+      Users: []
