@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: "Bereinigtes Template: Nur ProjPaulLambda mit S3-Code und zugeh\xF6riger\
+  \ IAM-Rolle"
+Parameters:
+  LambdaS3Bucket:
+    Description: Name of the S3 bucket that contains the Lambda ZIP
+    Type: String
+  LambdaS3Key:
+    Description: Key (Pfad) zur Lambda-ZIP-Datei im Bucket
+    Type: String
+Resources:
+  LambdaExecutionRole:
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Action: sts:AssumeRole
+          Effect: Allow
+          Principal:
+            Service: lambda.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      RoleName: ProjPaulLambdaExecutionRole
+    Type: AWS::IAM::Role
+  ProjPaulLambda:
+    Properties:
+      Code:
+        S3Bucket:
+          Ref: LambdaS3Bucket
+        S3Key:
+          Ref: LambdaS3Key
+      FunctionName: ProjPaulLambda
+      Handler: lambda_function.lambda_handler
+      MemorySize: 128
+      Role:
+        Fn::GetAtt:
+        - LambdaExecutionRole
+        - Arn
+      Runtime: python3.12
+      Timeout: 10
+    Type: AWS::Lambda::Function
