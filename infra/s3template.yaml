@@ -1,17 +1,20 @@
-AWSTemplateFormatVersion: '2010-09-09'
-Description: Erstellt ein S3-Bucket für statisches Hosting der ProjPau-Webseite
-
 Resources:
-  ProjPauS3Bucket:
+  WebsiteBucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: proj-pau-s3-1
       WebsiteConfiguration:
         IndexDocument: translation_tool.html
-        ErrorDocument: error.html
-      AccessControl: PublicRead
-
-Outputs:
-  WebsiteURL:
-    Description: URL der gehosteten statischen Webseite
-    Value: !GetAtt ProjPauS3Bucket.WebsiteURL
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: BucketOwnerEnforced
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: false
+        RestrictPublicBuckets: false
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+            BucketKeyEnabled: true
