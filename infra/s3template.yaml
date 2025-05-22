@@ -5,7 +5,7 @@ Resources:
   ProjPauS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: proj-pau-s3
+      BucketName: proj-pau-s3-1
       WebsiteConfiguration:
         IndexDocument: translation_tool.html
         ErrorDocument: error.html
