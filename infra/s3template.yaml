@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Erstellt ein S3-Bucket für statisches Hosting der ProjPau-Webseite
+
+Resources:
+  ProjPauS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: proj-pau-s3
+      WebsiteConfiguration:
+        IndexDocument: translation_tool.html
+        ErrorDocument: error.html
+      AccessControl: PublicRead
+
+Outputs:
+  WebsiteURL:
+    Description: URL der gehosteten statischen Webseite
+    Value: !GetAtt ProjPauS3Bucket.WebsiteURL
